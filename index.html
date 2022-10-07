@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Youtube Videos on MindAR.js</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="js/aframe-websurfaces-custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        AFRAME.registerComponent("world2local", {
+            tick: function () {
+                var worldToLocal = new THREE.Matrix4();
+                var scene = document.querySelector("a-scene");
+                worldToLocal.copy(this.el.object3D.matrixWorld).invert();
+                scene.object3D.applyMatrix4(worldToLocal);
+            },
+        });
+    </script>
+</head>
+
+<body>
+    <div id="buttons">
+        <button id="playButton">
+            Play
+        </button>
+        <button id="pauseButton">
+            Pause
+        </button>
+        <button id="stopButton">
+            Stop
+        </button>
+    </div>
+    <a-scene
+        mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/card-example/card.mind; filterMinCF:0.001; filterBeta: 10"
+        vr-mode-ui="enabled: false">
+        <a-camera position="0 0 0" look-controls="enabled: false; pointerLockEnabled: false"></a-camera>
+        <a-entity id="example-target" mindar-image-target="targetIndex: 0">
+            <a-entity id="myVid" world2local class="clickable"
+                websurface="url:https://www.youtube.com/embed/L6iKapYgN94; width:3.5; height:2.0;" position="0 0 0">
+            </a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+<script src="js/main.js"></script>
+
+</html>
