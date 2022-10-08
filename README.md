@@ -9,7 +9,7 @@ To see the project at work just copy the repository to your local server and exp
 ```
 websurface="url:https://www.youtube.com/embed/L6iKapYgN94; width:3.5; height:2.0;"
 ```
-Also make sure to reference custom AFrame Websurfaces component, available at "js" folder.
+Target image for tracking is located at "img" folder. Also make sure to reference custom AFrame Websurfaces component, available at "js" folder.
 
 ### **Tech Stack**
 The project is powered by MindAR.js, AFrame and Three.js.
