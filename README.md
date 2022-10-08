@@ -12,7 +12,9 @@ websurface="url:https://www.youtube.com/embed/L6iKapYgN94; width:3.5; height:2.0
 Target image for tracking is located at "img" folder. Also make sure to reference custom AFrame Websurfaces component, available at "js" folder.
 
 ### **Tech Stack**
-The project is powered by MindAR.js, AFrame and Three.js. CSS3d Renderer features are made available through Websurfaces component. 
+The project is powered by MindAR.js, AFrame and Three.js. CSS3d Renderer features are made available through Websurfaces component.
+
+<b>Please note:</b> CSS3d will not work in web VR mode!
 
 ### **Demo**
 To see the application at work: [Demo application](https://webar-youtube.glitch.me/)
