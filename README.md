@@ -1,4 +1,4 @@
-# Projecting Youtube Videos on Web based Augmented Reality
+# Projecting Youtube Videos on Web AR
 <img alt="Screenshot" src="img/screenshot.jpg" width="600">
 
 ### **Description / Rationale**
